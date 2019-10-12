@@ -29,4 +29,3 @@ def test_division_exception():
 )
 def test_positive(test_input,  expected):
     assert positive(test_input) == expected
-

@@ -19,4 +19,3 @@ def positive(numbers):
         if number > 0:
             result.append(number)
     return result
-

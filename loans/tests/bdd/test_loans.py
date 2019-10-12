@@ -38,11 +38,11 @@ def press_submit_button(browser):
 
 
 @then('I should see loans')
-def should_see_django_in_html(browser):
+def should_see_loans(browser):
     assert len(browser.find_by_css('li')) == 3
 
 
 @then('I should see a new loan')
-def should_see_django_in_html(browser):
+def should_see_new_loan(browser):
     assert len(browser.find_by_css('li')) == 1
     browser.find_by_css('body > ul > li').html == '1 - 5000'
