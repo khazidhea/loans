@@ -1,0 +1,8 @@
+<h1>Loans</h1>
+<ul>
+{% for loan in object_list %}
+    <li>{{ loan.id }} - {{ loan.amount }}</li>
+{% empty %}
+    <li>No loans yet.</li>
+{% endfor %}
+</ul>

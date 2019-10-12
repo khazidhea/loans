@@ -1,0 +1,11 @@
+.idea
+.ropeproject/
+.cache
+__pycache__
+*.sqlite3
+.coverage
+.pytest_cache
+.vscode
+__pycache__
+*.pyc
+*.tests.*/
