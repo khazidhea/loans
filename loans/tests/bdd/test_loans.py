@@ -1,6 +1,9 @@
 from pytest_bdd import scenario, given, when, then
 
-from loans.models import Loan
+from loans.factories import LoanFactory
+
+
+LOANS_SIZE = 3
 
 
 @scenario('features/loans.feature', 'Loans list')
@@ -15,9 +18,7 @@ def test_loans_add(browser):
 
 @given('I visit loans list')
 def visit_homepage(live_server, db, browser):
-    Loan.objects.create(amount=1000)
-    Loan.objects.create(amount=2000)
-    Loan.objects.create(amount=3000)
+    LoanFactory.create_batch(size=LOANS_SIZE)
     browser.visit(live_server.url)
 
 
@@ -39,7 +40,7 @@ def press_submit_button(browser):
 
 @then('I should see loans')
 def should_see_loans(browser):
-    assert len(browser.find_by_css('li')) == 3
+    assert len(browser.find_by_css('li')) == LOANS_SIZE
 
 
 @then('I should see a new loan')

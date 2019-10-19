@@ -1,6 +1,10 @@
 from django.db import models
 
 
+class Borrower(models.Model):
+    name = models.CharField(max_length=100)
+
+
 class Loan(models.Model):
     STATUS_NEW = 'new'
     STATUS_ACTIVE = 'active'

@@ -1,11 +1,12 @@
 import pytest
 
 from loans.models import Loan
+from loans.factories import LoanFactory
 
 
 @pytest.fixture
 def loan():
-    return Loan.objects.create(amount=100, term=5)
+    return LoanFactory.create()
 
 
 def test_create(db, loan):
@@ -19,6 +20,7 @@ def test_tick_ok(db, loan):
 
 
 def test_tick_status_change(db, loan):
+    loan.term = 5
     loan.term_counter = 5
     loan.save()
     loan.tick()

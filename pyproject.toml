@@ -16,6 +16,8 @@ pytest-splinter = "^2.0"
 pytest-django = "^3.5"
 pytest-cov = "^2.8"
 pytest-flake8 = "^1.0"
+factory_boy = "^2.12"
+ipython = "^7.8"
 
 [build-system]
 requires = ["poetry>=0.12"]
