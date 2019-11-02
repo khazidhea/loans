@@ -14,7 +14,7 @@ TERM_MAX = 30
 class LoanFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = 'loans.Loan'
-    
+
     amount = factory.LazyAttribute(lambda o: random.randrange(AMOUNT_MIN, AMOUNT_MAX, AMOUNT_STEP))
     term = factory.LazyAttribute(lambda o: random.randrange(TERM_MIN, TERM_MAX))
 
@@ -22,5 +22,5 @@ class LoanFactory(factory.django.DjangoModelFactory):
 class BorrowerFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = 'loans.Borrower'
-    
+
     name = factory.Faker('name')
