@@ -14,4 +14,4 @@ before_install:
 install:
   - poetry install
 script:
-  - poetry run pytest
+  - poetry run pytest --cov . --cov-report term-missing --cov-fail-under=100 --flake8
