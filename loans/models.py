@@ -15,7 +15,7 @@ class Loan(models.Model):
         (STATUS_ACTIVE, STATUS_ACTIVE),
         (STATUS_PAID, STATUS_PAID),
         (STATUS_EXPIRED, STATUS_EXPIRED),
-    )
+    
 
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     term = models.IntegerField(default=5)
