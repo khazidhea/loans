@@ -1,7 +1,7 @@
 dist: xenial
 language: python
 addons:
-  firefox: latest
+  firefox: "65.0"
 services:
   - xvfb
 python:
