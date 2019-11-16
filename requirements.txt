@@ -8,12 +8,16 @@ entrypoints==0.3
 factory-boy==2.12.0
 Faker==2.0.3
 flake8==3.7.8
+gevent==1.4.0
 glob2==0.7
+greenlet==0.4.15
 gunicorn==20.0.0
 importlib-metadata==0.23
 ipython==7.8.0
 ipython-genutils==0.2.0
 jedi==0.15.1
+# Editable install with no version control (loans==0.1.0)
+-e /media/khazidhea/Data/dev/attractor/loans
 Mako==1.1.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
