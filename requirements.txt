@@ -16,8 +16,6 @@ importlib-metadata==0.23
 ipython==7.8.0
 ipython-genutils==0.2.0
 jedi==0.15.1
-# Editable install with no version control (loans==0.1.0)
--e /media/khazidhea/Data/dev/attractor/loans
 Mako==1.1.0
 MarkupSafe==1.1.1
 mccabe==0.6.1
