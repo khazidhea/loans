@@ -7,6 +7,7 @@ authors = ["Azamat Galimzhanov <azamat@galimzhanov.com>"]
 [tool.poetry.dependencies]
 python = "3.7.4"
 django = "^2.2"
+fabric = "^2.5"
 
 [tool.poetry.dev-dependencies]
 selenium = "^3.141"
