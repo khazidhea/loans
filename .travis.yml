@@ -16,4 +16,9 @@ install:
   - poetry install
 script:
   - poetry run pytest
-  - poetry run fab -i deploy_id_rsa deploy
+deploy:
+  on:
+    branch: master
+  skip_cleanup: true
+  provider: script
+  script: poetry run fab -i deploy_id_rsa deploy
