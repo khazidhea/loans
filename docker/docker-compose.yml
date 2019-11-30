@@ -2,7 +2,7 @@ version: '3'
 
 services:
   django:
-    image: registry.gitlab.com/imoney/scoring:master
+    image: docker.pkg.github.com/khazidhea/loans/latest
     command: bash -c "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn -c gunicorn.conf core.wsgi"
     volumes:
       - ./gunicorn.conf:/src/gunicorn.conf
