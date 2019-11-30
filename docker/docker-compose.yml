@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  django:
+    image: registry.gitlab.com/imoney/scoring:master
+    command: bash -c "python manage.py collectstatic --noinput && python manage.py migrate && gunicorn -c gunicorn.conf core.wsgi"
+    volumes:
+      - ./gunicorn.conf:/src/gunicorn.conf
+      - ./logs:/logs
+      - ./static:/src/staticfiles
+    ports:
+      - 8000:8000
+
+  nginx:
+    image: nginx:latest
+    depends_on:
+      - django
+    environment:
+      - TZ=Asia/Almaty
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./logs:/logs
+      - ./static:/static
+    ports:
+      - "80:80"
+      - "443:443"
