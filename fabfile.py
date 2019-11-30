@@ -24,4 +24,3 @@ def deploy(c):
         )
     )
     c.run('sudo supervisorctl restart all', pty=True)
-
