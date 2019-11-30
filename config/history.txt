@@ -1,0 +1,92 @@
+   97  python manage.py runserver
+   98  python manage.py migrate
+   99  ls -la
+  100  python manage.py runserver
+  101  cd /srv/loans/
+  102  source ~/.virtualenvs/loans/bin/activate
+  103  python manage.py runserver
+  104  python manage.py runserver 0.0.0.0:8000
+  105  python manage.py runserver 0.0.0.0:80
+  106  git pull
+  107  git status
+  108  git diff
+  109  git checkout .
+  110  git status
+  111  git pull
+  112  pip install -r requirements.txt 
+  113  ls -la
+  114  ls -la core
+  115  gunciron core.wsgi -b 0.0.0.0:8000
+  116  gunicorn core.wsgi -b 0.0.0.0:8000
+  117  sudo apt install supervisor
+  118  ls -la /etc/supervisor/
+  119  vim /etc/supervisor/conf.d/gunicorn.conf
+  120  sudo supervisorctl reread
+  121  sudo supervisorctl
+  122  sudo supervisor restart
+  123  sudo supervisor reload
+  124  sudo supervisorctl reload
+  125  sudo supervisorctl 
+  126  cd /etc/supervisor/conf.d/
+  127  vim gunicorn.conf 
+  128  sudo supervisorctl gunicorn stop
+  129  sudo supervisorctl stop gunicorn
+  130  source ~/.virtualenvs/loans/bin/activate
+  131  cd /srv/loans/
+  132  python manage.py runserver 0.0.0.0:80
+  133  python manage.py runserver 0.0.0.0:8000
+  134  sudo supervisorctl start gunicorn
+  135  sudo service nginx status
+  136  sudo apt install nginx
+  137  ls -la /etc/nginx/
+  138  vim /etc/nginx/nginx.conf 
+  139  cd /etc/nginx/
+  140  cd sites-enabled/
+  141  ls -la
+  142  cd ..
+  143  cd sites-available/
+  144  vim default 
+  145  cd /var/www/html
+  146  ls -la
+  147  vim index.nginx-debian.html
+  148  cd -
+  149  vim default 
+  150  rm default 
+  151  sudo rm default 
+  152  sudo vim default
+  153  sudo nginx restart
+  154  sudo service nginx restart
+  155  cd /srv/loans/
+  156  ls -la
+  157  mkdir staticfiles
+  158  cd staticfiles/
+  159  vim hello.txt
+  160  vim hello.html
+  161  cd ..
+  162  git pull
+  163  python manage.py collectstatic
+  164  cd staticfiles/
+  165  ls -la
+  166  rm hello.html 
+  167  cd ..
+  168  vim /etc/nginx/sites-available/default 
+  169  sudo service nginx restart
+  170  vim /etc/supervisor/conf.d/gunicorn.conf 
+  171  sudo supervisorctl restart gunicorn
+  172  vim /etc/supervisor/conf.d/gunicorn.conf 
+  173  sudo supervisorctl reread
+  174  sudo supervisorctl restart gunicorn
+  175  sudo supervisorctl relload
+  176  sudo supervisorctl reload
+  177  git pull
+  178  vim /etc/supervisor/conf.d/gunicorn.conf 
+  179  sudo supervisorctl reload
+  180  vim /etc/supervisor/conf.d/gunicorn.conf 
+  181  gunicorn core.wsgi -c gunicorn.conf
+  182  pip install -r requirements.txt 
+  183  git pull
+  184  pip install -r requirements.txt 
+  185  gunicorn core.wsgi -c gunicorn.conf
+  186  sudo supervisorctl reload
+  187  cat /etc/supervisor/conf.d/gunicorn.conf 
+  188  cat /etc/nginx/sites-available/default 
