@@ -19,7 +19,7 @@ pytest-django = "^3.5"
 pytest-cov = "^2.8"
 pytest-flake8 = "^1.0"
 factory_boy = "^2.12"
-ipython = "^7.8"
+ipython = "^7.16"
 pytest-mock = "^1.11"
 
 [build-system]
